@@ -20,22 +20,22 @@ window.onload = function () {
 
 // clicking on another function overrides active div
 
-function func_js() {
+function js() {
   let target = document.getElementById("body");
   target.setAttribute("style", "background-image: linear-gradient(hsl(52, 74%, 59%), hsl(0, 11%, 9%));")
 }
 
-function func_cs() {
+function cs() {
   let target = document.getElementById("body");
   target.setAttribute("style", "background-image: linear-gradient(hsl(288, 55%, 38%), hsl(0, 11%, 9%));")
 }
 
-function func_cpp() {
+function cpp() {
   let target = document.getElementById("body");
   target.setAttribute("style", "background-image: linear-gradient(hsl(206, 100%, 31%), hsl(0, 11%, 9%));")
 }
 
-function func_background_off(){
+function background_off(){
   let target = document.getElementById("body");
   target.setAttribute("style", "background-image: linear-gradient(hsl(0, 4%, 18%), hsl(0, 11%, 9%));");
 }
