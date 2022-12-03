@@ -1,38 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>ᴅᴀɴɪᴇʟ | C++ / C#</title>
+    <title>Daniel Klas</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/font/fontsheet.css">
     <link rel="icon" href="visuals/contra.png" type="image/x-icon">
     <script src="script.js"></script>
 </head>
+
 <body class="body" id="body">
 
-    <div class="navbar_container_top" id="navbar_container_top">
+    <p class="background"></p>
+    <!--Top Navigation-->
+    <div class="nav_top_container" id="nav_top_container">
         <ul>
-            <li class="top_content" id="top_projects">ᴘʀᴏᴊᴇᴄᴛꜱ</li>
-            <li class="top_content" id="top_library">ᴍʏ ʟɪʙʀᴀʀʏ</li>
-            <li class="top_content" id="top_about">ᴀʙᴏᴜᴛ</li>
+            <li class="nav_top" id="top_projects">PROJECTS</li>
+            <li class="nav_top" id="top_library">MY LIBRARY</li>
+            <li class="nav_top" id="top_social">SOCIAL</li>
         </ul>
     </div>
+    <hr style="width: 70%;">
 
-    <div class="navbar_container_sub" id="navbar_container_sub">
-        <span class="sub_content" id="sub_js">JS</span>
-        <span class="sub_content" id="sub_cs">C#</span>
-        <span class="sub_content" id="sub_cpp">C++</span>
+    <!--Portfolio Contents-->
+
+    <div class="content_container" id="projects_container">
+
+        <div id="image_carousel">
+            <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+
+            <div class="slides">
+                <img src="visuals/project_th/1.png" class="image_slideshow_mobile" id="img_th_1">
+            </div>
+            <div class="slides">
+                <img src="visuals/project_th/2.png" class="image_slideshow_mobile" id="img_th_2">
+            </div>
+            <div class="slides">
+                <img src="visuals/project_th/3.png" class="image_slideshow_mobile" id="img_th_3">
+            </div>
+            <div class="slides">
+                <img src="visuals/project_th/4.png" class="image_slideshow_mobile" id="img_th_4">
+            </div>
+
+            <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+        </div>
+
+        <div class="image_description">
+            <h2>Treasure Hunt Mobile Web App</h2>
+            <br>
+            As part of my internship at Amazon, I have designed and implemented a Web App aimed at
+            providing active leisure to the office staff, as well as increasing engagement. Treasure Hunt is 
+            a scavenger-hunt-like game that displays clues to finding treasure after scanning the right QR codes 
+            found around the Amazon center. It can also be used to train new staff in the vast space of the Amazon 
+            warehouses. 
+        </div>
     </div>
 
-    <div class="projects" id="projects">
+    <!--Library Contents-->
+
+    <div class="content_container" id="library_container">
+        
+        <div class="image_description">
+            Below are the books that have significantly improved my programming skills. I highly recommend them to anyone who takes interest in programming, 
+            regardless of their experience.
+        </div>
+        <br><br><br>
+
+        <div class="mySlides">
+            <img src="visuals/books/clean_code.jpg" class="image_slideshow_mobile" id="img_th_1">
+        </div>
+
+        <div class="image_description">
+            I strive for perfection in my code readability, whether it is just a small function or a large program. Up until the point when I have read Clean Code, 
+            I was struggling to find the best structure to use in my daily coding. Simultaneously, this is the book that made me realise that I need to rebuild a fair chunk 
+            of my portfolio, because I could not believe that my code did not follow such fantastic concepts.
+            <br><br>
+            Do not let the title misguide you, it is far from 462 pages of reasons why you should use camelCase over PascalCase and snake_case. Clean Code takes you on a journey through 
+            a perspective of programming that you might not yet have taken. Robert C. Martin refers to programming as a form of art. It is the beauty of code that 
+            can be read and fully understood in minutes by anyone regardless of their experience. It tackles interesting topics such as time & space complexity, with examples of solving 
+            those problems in the most efficient ways.
+        </div>
+
     </div>
 
+    <!--Social Contents-->
 
-    <div class="content_container" id="my_library">
-        <p class="header">This is my library:</p><hr style="width:80%;">
+    <div class="content_container" id="social_container">
+
+        <div class="links">
+            <a class="links" link href="https://www.hackerrank.com/danielklas">HackerRank</a>
+            <a class="links" link href="https://www.linkedin.com/in/daniel-klas-023732191/">LinkedIn</a>
+            <a class="links" link href="https://stackoverflow.com/users/10788259/dano">StackOverflow</a>
+            <a class="links" link href="https://github.com/DanielKlas">GitHub</a>
+            <hr>
+        </div>
+        
+
+        <div style="float: left;">
+            <img src="visuals/social/profile.jpg" style="width:45%;">
+        </div>
+        <div class="image_description">
+            Greetings and welcome to my portfolio!
+            <br><br>
+            My name is Daniel and I recently finished my Business IT and Games Development undergraduate degrees at
+            Napier University in Scotland.
+            <br><br>
+            What I enjoy most is planning and creating, and my primary outlet for both is programming. It is exciting to
+            actualise ideas and build vast,
+            interconnected systems by creating individual pieces that make them up.
+            <br><br>
+            In my free time I host Dungeons & Dragons games for my friends, play my trusty acoustic guitar, hike and cook
+            delicious dishes with my wife.
+        </div>
     </div>
-    <div class="content_container" id="about">
-        <p class="header">This is about me section:</p><hr style="width:80%;">
-    </div>
+
 </body>
+
 </html>

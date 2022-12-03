@@ -1,41 +1,54 @@
+// Top Navigation Event Listeners and Global Constants
+
 window.onload = function () {
-  var item = document.getElementById("sub_js");
-  item.addEventListener("click", func_js, false);
-  
-  item = document.getElementById("sub_cs");
-  item.addEventListener("click", func_cs, false);
+  const navProjects = document.getElementById("top_projects");
+  navProjects.addEventListener("click", displayProjects);
 
-  item = document.getElementById("sub_cpp");
-  item.addEventListener("click", func_cpp, false);
+  const navLibrary = document.getElementById("top_library");
+  navLibrary.addEventListener("click", displayLibrary);
 
-  item = document.getElementById("top_projects");
-  item.addEventListener("click", func_background_off, false);
-
-  item = document.getElementById("top_library");
-  item.addEventListener("click", func_background_off, false);
-
-  item = document.getElementById("top_about");
-  item.addEventListener("click", func_background_off, false);
+  const navSocial = document.getElementById("top_social");
+  navSocial.addEventListener("click", displaySocial);
 }
 
-// clicking on another function overrides active div
 
-function js() {
-  let target = document.getElementById("body");
-  target.setAttribute("style", "background-image: linear-gradient(hsl(52, 74%, 59%), hsl(0, 11%, 9%));")
+// Colour changers and section visibility
+
+function displayProjects(){
+  document.getElementById("library_container").setAttribute("style", "display: none;");
+  document.getElementById("social_container").setAttribute("style", "display: none;");
+  document.getElementById("projects_container").setAttribute("style", "display: block;");
 }
 
-function cs() {
-  let target = document.getElementById("body");
-  target.setAttribute("style", "background-image: linear-gradient(hsl(288, 55%, 38%), hsl(0, 11%, 9%));")
+function displayLibrary(){
+  document.getElementById("library_container").setAttribute("style", "display: block;");
+  document.getElementById("social_container").setAttribute("style", "display: none;");
+  document.getElementById("projects_container").setAttribute("style", "display: none;");
 }
 
-function cpp() {
-  let target = document.getElementById("body");
-  target.setAttribute("style", "background-image: linear-gradient(hsl(206, 100%, 31%), hsl(0, 11%, 9%));")
+function displaySocial(){
+  document.getElementById("library_container").setAttribute("style", "display: none;");
+  document.getElementById("social_container").setAttribute("style", "display: block;");
+  document.getElementById("projects_container").setAttribute("style", "display: none;");
 }
 
-function background_off(){
-  let target = document.getElementById("body");
-  target.setAttribute("style", "background-image: linear-gradient(hsl(0, 4%, 18%), hsl(0, 11%, 9%));");
-}
+// Slideshows
+
+const buttons = document.querySelectorAll("[data-carousel-button]")
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]")
+
+    const activeSlide = slides.querySelector("[data-active]")
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
+
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  })
+})

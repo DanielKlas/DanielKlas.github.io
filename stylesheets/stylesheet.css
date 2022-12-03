@@ -1,0 +1,139 @@
+body{
+    font-family: Calibri;
+    color: white;
+    margin: 0;
+    background-image: linear-gradient(hsl(0, 4%, 18%), hsl(0, 11%, 9%));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#my_library, 
+#about, 
+#library_container, 
+#projects_container,
+#img_th_2,
+#img_th_3,
+#img_th_4{
+    display: none;
+}
+
+.nav_top_container{
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    padding-right: 4%;
+    font-family: 'architects_daughterregular';
+}
+
+.nav_top{
+    display: inline-block;
+    font-size: 36px;
+    padding: 1%;
+}
+
+.nav_top:hover{
+    text-decoration: underline;
+}
+
+.links{
+    margin-bottom: 3%;
+    padding: 1%;
+    margin-top: -5%;
+    text-decoration: none;
+    font-family: 'architects_daughterregular';
+}
+
+.content_container{
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 70%;
+    text-align: center;
+}
+
+a{
+   font-size: 30px;
+   color: white;
+   width: 30%;
+}
+
+.image_slideshow_mobile{
+    width: 25%;
+    height: auto;
+    float: left;
+    margin-right: 5%;
+}
+
+.image_description{
+    font-size: 25px;
+    font-family: Calibri;
+}
+
+/* ----------------------------- */
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+  }
+  
+  .slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+  }
+  
+  .carousel-button:hover,
+  .carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+  }
+  
+  .carousel-button:focus {
+    outline: 1px solid black;
+  }
+  
+  .carousel-button.prev {
+    left: 1rem;
+  }
+  
+  .carousel-button.next {
+    right: 1rem;
+  }
