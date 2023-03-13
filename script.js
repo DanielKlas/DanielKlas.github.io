@@ -15,19 +15,16 @@ window.onload = function () {
 // Colour changers and section visibility
 
 function displayProjects(){
-  document.getElementById("library_container").setAttribute("style", "display: none;");
   document.getElementById("social_container").setAttribute("style", "display: none;");
   document.getElementById("projects_container").setAttribute("style", "display: block;");
 }
 
 function displayLibrary(){
-  document.getElementById("library_container").setAttribute("style", "display: block;");
   document.getElementById("social_container").setAttribute("style", "display: none;");
   document.getElementById("projects_container").setAttribute("style", "display: none;");
 }
 
 function displaySocial(){
-  document.getElementById("library_container").setAttribute("style", "display: none;");
   document.getElementById("social_container").setAttribute("style", "display: block;");
   document.getElementById("projects_container").setAttribute("style", "display: none;");
 }
