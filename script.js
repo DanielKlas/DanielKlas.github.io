@@ -4,9 +4,6 @@ window.onload = function () {
   const navProjects = document.getElementById("top_projects");
   navProjects.addEventListener("click", displayProjects);
 
-  const navLibrary = document.getElementById("top_library");
-  navLibrary.addEventListener("click", displayLibrary);
-
   const navSocial = document.getElementById("top_social");
   navSocial.addEventListener("click", displaySocial);
 }
